@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mall of America — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--cream); margin: 20px 0 8px; }
+    .info-grid {
+      display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 20px; margin-bottom: 24px;
+    }
+    .info-label { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list { list-style: none; padding: 0; }
+    .highlight-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: flex-start; }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--navy); background: var(--gold); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .tip-box { background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.3); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .tip-box-title { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .restaurant-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+    .restaurant-name { font-weight: 600; color: var(--cream); }
+    .restaurant-detail { font-size: 15px; color: var(--text-muted); }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+    .tax-badge {
+      display: inline-block;
+      background: rgba(107,143,113,0.2);
+      border: 1px solid rgba(107,143,113,0.5);
+      color: #8fc99a;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>Mall of America</h1>
+    <p class="subtitle">미국 최대 쇼핑몰 — 500+ 매장, 실내 테마파크, 미네소타 의류 면세. Blue Line으로 공항 직결.</p>
+
+    <div class="section">
+      <div class="info-grid">
+        <span class="info-label">주소</span>
+        <span class="info-value">60 E Broadway, Bloomington, MN 55425</span>
+
+        <span class="info-label">운영시간</span>
+        <span class="info-value">월–토 10:00–21:30 / 일 11:00–19:00</span>
+
+        <span class="info-label">입장료</span>
+        <span class="info-value">몰 입장 <strong>무료</strong>. Nickelodeon Universe $40–$55 / SEA LIFE $25–$30 (별도)</span>
+
+        <span class="info-label">소요 시간</span>
+        <span class="info-value">쇼핑 중심 3–4시간 / 어트랙션 포함 풀코스 6–8시간</span>
+
+        <span class="info-label">웹사이트</span>
+        <span class="info-value"><a href="https://www.mallofamerica.com/" target="_blank" rel="noopener">mallofamerica.com</a></span>
+
+        <span class="info-label">DoubleTree</span>
+        <span class="info-value">Blue Line 35분 / Uber 25분 ($20~30)</span>
+
+        <span class="info-label">세금 혜택</span>
+        <span class="info-value">미네소타주 <strong>의류·신발 면세</strong>. 비의류 품목은 6.875% 과세.</span>
+      </div>
+      <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/60+E+Broadway,+Bloomington,+MN+55425" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+    </div>
+
+    <div class="section">
+      <h2>소개</h2>
+      <p>1992년 개장한 Mall of America(MOA)는 면적 240,000m², 500개 이상의 매장과 50개 이상의 레스토랑을 갖춘 미국 최대 쇼핑몰입니다. 이전에 Minnesota Twins와 Vikings가 사용하던 Metropolitan Stadium 부지 위에 세워졌습니다.</p>
+      <p>몰 중심부에는 <strong>Nickelodeon Universe</strong>가 있습니다. 미국 최대의 실내 테마파크로, 실내 롤러코스터를 포함한 28개의 놀이기구가 있습니다. 연간 방문객 수가 약 4,000만 명으로, 미국에서 가장 많이 방문하는 관광지 중 하나입니다.</p>
+      <p>무엇보다 한국 여행자에게 중요한 사실: <strong>미네소타주는 의류와 신발에 세금을 부과하지 않습니다.</strong> 다른 주에서 쇼핑할 때와 비교하면 상당한 절약이 가능합니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>쇼핑 하이라이트</h2>
+      <ul class="highlight-list">
+        <li>
+          <span class="highlight-num">1</span>
+          <span><strong>Nike / Adidas / Under Armour</strong> <span class="tax-badge">의류 면세</span> — 스포츠웨어는 한국 대비 가격 경쟁력이 높습니다. 의류 면세까지 적용되면 더욱 유리합니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">2</span>
+          <span><strong>Coach / Kate Spade / Michael Kors</strong> <span class="tax-badge">의류 면세</span> — 미국 브랜드 가방·지갑 라인업이 한국보다 다양하고 가격도 낮습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">3</span>
+          <span><strong>Sephora / Ulta Beauty</strong> — K-beauty 브랜드부터 미국·유럽 뷰티까지. 한국에서 구하기 어려운 제품들을 현지 가격에 구매할 수 있습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">4</span>
+          <span><strong>LEGO Store</strong> — 미국 한정 세트와 대형 LEGO 조형물. 선물용으로 인기 있으며, 매장 자체가 포토 스팟입니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">5</span>
+          <span><strong>Nickelodeon Universe</strong> — 실내 테마파크. 어린이 동반 가족에게 추천. 어른도 충분히 즐길 수 있는 놀이기구들이 있습니다.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>방문 팁</h2>
+
+      <div class="tip-box">
+        <div class="tip-box-title">의류·신발 면세 활용법</div>
+        <p>미네소타주는 의류와 신발에 판매세를 부과하지 않습니다. 비의류(전자제품, 액세서리 등)는 6.875%가 적용됩니다. 의류 쇼핑 계획이 있다면 MOA는 미국 내 최고의 선택지 중 하나입니다.</p>
+      </div>
+
+      <h3>최적 방문 시간</h3>
+      <p>평일 오전이 가장 한적합니다. 개장 직후(10:00 전후)에 방문하면 인기 매장들을 여유롭게 둘러볼 수 있습니다. 주말 오후는 특히 붐비므로 피하는 것이 좋습니다.</p>
+
+      <h3>교통 & 짐 관리</h3>
+      <p>Blue Line 지하철로 다운타운에서 약 25분 소요됩니다. <strong>쇼핑 후 짐이 많아질 것을 고려해 차량 이용이 더 편리합니다.</strong> 귀국 당일에는 Blue Line이 공항(MSP)과 직결되므로, 출국 전 오전에 방문하는 것도 좋은 선택입니다.</p>
+
+      <h3>편의</h3>
+      <ul>
+        <li>몰이 매우 넓습니다. 편한 신발 필수.</li>
+        <li><strong>MOA 공식 앱</strong>에서 매장 지도, 특가 정보를 확인할 수 있습니다.</li>
+        <li>SEA LIFE 아쿠아리움 티켓은 온라인 사전 구매 시 할인됩니다.</li>
+      </ul>
+
+      <h3>사진 포인트</h3>
+      <ul>
+        <li>3–4층 난간에서 Nickelodeon Universe 전체 조망</li>
+        <li>LEGO Store 대형 조형물</li>
+        <li>개장 직후 방문하면 인파 없이 깔끔하게 촬영 가능</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>식사</h2>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Twin City Grill</div>
+        <div class="restaurant-detail">MOA 내부 위치. 미네소타 스타일의 미국 음식. 쇼핑 중간 점심 식사로 적합합니다.</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Shake Shack</div>
+        <div class="restaurant-detail">MOA 내부 위치. 미국 여행 중 버거를 즐기고 싶다면 무난한 선택. 줄이 길 수 있으므로 오전 방문 후 점심 피크 전에 가는 것을 추천합니다.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>한국인 여행자를 위한 포인트</h2>
+      <p>Mall of America는 한국인 방문자들 사이에서 가장 인기 있는 미네아폴리스 명소입니다. 이유는 명확합니다. <strong>미국 최대 쇼핑몰 + 의류 면세 + 공항 직결</strong>이라는 세 가지 장점이 겹치기 때문입니다.</p>
+      <p>Nike, Coach, Kate Spade 등 미국 브랜드를 합리적인 가격에 구매하고, Sephora와 Ulta에서 미국 뷰티 제품을 쇼핑하는 것이 정석 코스입니다. 쇼핑 후 짐이 많아지므로 차량 이용을 권장합니다.</p>
+      <p>귀국 당일 일정이라면 Blue Line으로 공항까지 바로 이동할 수 있어 매우 편리합니다. 다만 수하물 무게 제한을 미리 확인하고 여유 있게 움직이세요.</p>
+    </div>
+  </div>
+</body>
+</html>

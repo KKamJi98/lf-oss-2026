@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minneapolis Institute of Art — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--cream); margin: 20px 0 8px; }
+    .info-grid {
+      display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 20px; margin-bottom: 24px;
+    }
+    .info-label { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list { list-style: none; padding: 0; }
+    .highlight-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: flex-start; }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--navy); background: var(--gold); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .tip-box { background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.3); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .tip-box-title { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .restaurant-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+    .restaurant-name { font-weight: 600; color: var(--cream); }
+    .restaurant-detail { font-size: 15px; color: var(--text-muted); }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>Minneapolis Institute of Art</h1>
+    <p class="subtitle">상설 컬렉션 무료 입장 — 5,000년 역사, 90,000점+ 컬렉션. 아시아 미술 미국 최고 수준.</p>
+
+    <div class="section">
+      <div class="info-grid">
+        <span class="info-label">주소</span>
+        <span class="info-value">2400 3rd Ave S, Minneapolis, MN 55404</span>
+
+        <span class="info-label">운영시간</span>
+        <span class="info-value">화·수·토 10:00–17:00 / 목·금 10:00–21:00 / 일 11:00–17:00 / 월 휴관</span>
+
+        <span class="info-label">입장료</span>
+        <span class="info-value">상설 전시 <strong>무료</strong>. 특별전 $16–$20.</span>
+
+        <span class="info-label">소요 시간</span>
+        <span class="info-value">하이라이트 코스 2시간 / 전체 관람 4–5시간</span>
+
+        <span class="info-label">웹사이트</span>
+        <span class="info-value"><a href="https://new.artsmia.org/" target="_blank" rel="noopener">new.artsmia.org</a></span>
+
+        <span class="info-label">DoubleTree</span>
+        <span class="info-value">도보 25~30분, Uber 8분 ($8~12)</span>
+      </div>
+      <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/2400+3rd+Ave+S,+Minneapolis,+MN+55404" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+    </div>
+
+    <div class="section">
+      <h2>소개</h2>
+      <p>1915년 개관한 Mia는 미네아폴리스를 대표하는 세계적인 미술관입니다. 5,000년에 걸친 인류 문명의 예술품 90,000점 이상을 소장하고 있으며, 특히 <strong>아시아 미술 컬렉션은 미국 내 최고 수준</strong>으로 평가받습니다. Rembrandt, Monet, van Gogh 등 유럽 거장들의 작품도 만날 수 있습니다.</p>
+      <p>건축적으로도 흥미롭습니다. 원래 건물에 Kenzo Tange(1974)와 Michael Graves(2006)의 증축이 더해져 각기 다른 시대의 건축 언어가 공존합니다. 그리고 상설 전시가 <strong>완전 무료</strong>라는 점이 가장 큰 장점입니다. 세계적인 수준의 컬렉션을 무료로 즐길 수 있는 미네아폴리스의 숨겨진 명소입니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>관람 하이라이트</h2>
+      <ul class="highlight-list">
+        <li>
+          <span class="highlight-num">1</span>
+          <span><strong>Korea Gallery (한국 갤러리)</strong> — 고려청자, 조선백자, 불교미술, 민화, 한국 전통 가구까지. 중서부 미국 최고 수준의 한국 미술 컬렉션. 한국인 방문자라면 절대 놓치지 말 것.</span>
+        </li>
+        <li>
+          <span class="highlight-num">2</span>
+          <span><strong>아시아 갤러리 전체</strong> — 한국관을 중심으로 일본, 중국, 인도, 동남아시아 전시관이 연결됩니다. 규모와 큐레이션 모두 탁월합니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">3</span>
+          <span><strong>Doryphoros (도리포로스)</strong> — 고대 그리스 조각의 로마 시대 복제본. 폼페이에서 발굴된 유일하게 완전한 형태로, 고전 미(美)의 기준이 된 작품입니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">4</span>
+          <span><strong>유럽 회화관</strong> — Rembrandt의 초상화, Monet의 인상주의 풍경, van Gogh의 드로잉 등 유럽 회화의 정수를 한자리에서 볼 수 있습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">5</span>
+          <span><strong>현대 미술관</strong> — 20세기 이후 미국과 유럽의 현대 미술 작품들. 고대부터 현대까지 한 번에 흐름을 파악할 수 있습니다.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>방문 팁</h2>
+
+      <div class="tip-box">
+        <div class="tip-box-title">Best Time</div>
+        <p>평일 오전이 가장 한적합니다. 목·금요일은 21:00까지 운영하므로 저녁 방문도 좋습니다. 저녁 시간대는 독특한 조명 아래 작품 분위기가 달라집니다.</p>
+      </div>
+
+      <h3>효율적인 관람 동선</h3>
+      <p>90,000점 전체를 보는 것은 비현실적입니다. 방문 전 관심 분야(아시아 미술 / 유럽 회화 / 현대 미술)를 미리 정하고 가는 것이 핵심입니다. <strong>Mia 공식 앱</strong>에서 오디오 가이드를 무료로 제공하므로 미리 다운로드하세요.</p>
+
+      <h3>편의시설</h3>
+      <ul>
+        <li>무료 클로크룸(짐 보관소) 운영 — 쇼핑 후 방문할 경우 짐을 맡기고 편하게 관람 가능</li>
+        <li>매월 셋째 목요일 <strong>Third Thursday</strong> 이벤트 — 음악·음식과 함께하는 특별 저녁 프로그램</li>
+        <li>관내 카페·뮤지엄숍 운영</li>
+      </ul>
+
+      <h3>사진 촬영</h3>
+      <p>1층 중앙 로비의 대형 계단과 아치 구조물이 가장 포토제닉한 공간입니다. 목·금 저녁에는 조명이 달라져 독특한 분위기를 연출합니다. 플래시 촬영은 금지입니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>주변 식당</h2>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Agra Culture</div>
+        <div class="restaurant-detail">Mia 내부 위치. 건강한 미국식 샐러드·샌드위치. 관람 전후 가볍게 식사하기 좋습니다.</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Eat Street 일대</div>
+        <div class="restaurant-detail">Mia에서 도보 약 10분. Nicollet Ave의 별명으로 다양한 에스닉 레스토랑이 밀집한 거리입니다.</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Quang Restaurant</div>
+        <div class="restaurant-detail">Eat Street 내 위치. 도보 약 10분. 미네아폴리스 최고의 베트남 쌀국수(Pho) 맛집으로 현지인 사이에서 정평이 나 있습니다.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>한국인 여행자를 위한 포인트</h2>
+      <p><strong>Korea Gallery는 별도 전시관으로 독립 운영됩니다.</strong> 고려청자의 비색, 조선백자의 단아한 형태, 불교 회화(불화), 민화, 조선 시대 목가구까지 — 해외에서 이 수준의 한국 미술을 한자리에서 보기 어렵습니다. 중서부 미국에서 단연 최고입니다.</p>
+      <p>도자기에 특별한 관심이 없더라도 아시아 갤러리 전체 수준이 뛰어나므로 충분히 가치가 있습니다. 그리고 상설 전시 무료 입장이라는 점을 다시 강조합니다. 세계 수준의 미술관을 무료로 즐길 수 있는, 미네아폴리스에서 가장 가성비 높은 명소입니다.</p>
+    </div>
+  </div>
+</body>
+</html>

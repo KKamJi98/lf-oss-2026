@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Avenue — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--cream); margin: 20px 0 8px; }
+    .info-grid {
+      display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 20px; margin-bottom: 24px;
+    }
+    .info-label { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list { list-style: none; padding: 0; }
+    .highlight-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: flex-start; }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--navy); background: var(--gold); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .tip-box { background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.3); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .tip-box-title { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .restaurant-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+    .restaurant-name { font-weight: 600; color: var(--cream); }
+    .restaurant-detail { font-size: 15px; color: var(--text-muted); }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>First Avenue &amp; 7th St Entry</h1>
+    <p class="subtitle">Prince의 성지 — Purple Rain 촬영지, 아티스트 명판 외벽</p>
+
+    <div class="section">
+      <div class="info-grid">
+        <span class="info-label">주소</span>
+        <span class="info-value">701 1st Ave N, Minneapolis, MN 55403</span>
+        <span class="info-label">운영시간</span>
+        <span class="info-value">외관 24시간 개방. 공연 당일 일정에 따라 상이</span>
+        <span class="info-label">입장료</span>
+        <span class="info-value">외관 무료. 공연 $15 ~ $80+</span>
+        <span class="info-label">웹사이트</span>
+        <span class="info-value"><a href="https://first-avenue.com/" target="_blank" rel="noopener">first-avenue.com</a></span>
+        <span class="info-label">DoubleTree</span>
+        <span class="info-value">도보 12~15분, Uber 6분 ($6~10)</span>
+        <span class="info-label">체류시간</span>
+        <span class="info-value">외관 사진 15~20분 / 공연 관람 2~4시간</span>
+      </div>
+      <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/701+1st+Ave+N,+Minneapolis,+MN+55403" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+    </div>
+
+    <div class="section">
+      <h2>역사와 배경</h2>
+      <p>First Avenue는 1937년 Greyhound 버스 터미널로 지어진 건물을 1970년 공연장으로 개조한 곳입니다. 미니애폴리스 다운타운 심장부에 위치한 이 검은 건물은 50년 넘도록 라이브 뮤직의 중심지로 자리잡아 왔습니다.</p>
+      <p>가장 유명한 역사는 단연 <strong>Prince</strong>입니다. 1984년 영화 <strong>Purple Rain</strong>의 주요 장면이 이 무대에서 촬영되었으며, Prince는 이곳을 자신의 홈 스테이지로 삼아 커리어 내내 이 무대를 사랑했습니다. 2016년 Prince 사망 이후 건물 외벽은 자연스럽게 추모 공간이 되었고, 팬들이 남긴 메시지와 꽃이 지금도 이어지고 있습니다.</p>
+      <p>외벽을 가득 채운 <strong>별(Stars) 장식</strong>은 이 공연장만의 독특한 전통입니다. 메인홀 무대에 선 아티스트의 이름이 별 안에 새겨지며, Nirvana, U2, Tina Turner, R.E.M. 등 수백 명의 이름이 새겨져 있습니다. 2019년에는 국가 역사 등록지(National Register of Historic Places)에 등재되었습니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>주요 볼거리</h2>
+      <ul class="highlight-list">
+        <li>
+          <span class="highlight-num">1</span>
+          <span><strong>Stars Wall (별 장식 외벽)</strong> — 수백 개의 별 속에 새겨진 아티스트 이름들. Prince, Nirvana, U2 등 아는 이름을 직접 찾아보는 재미가 있습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">2</span>
+          <span><strong>Purple Rain 연관 장소</strong> — 영화 속 무대와 동일한 공간. 팬이라면 외벽 앞 사진 한 장이 필수입니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">3</span>
+          <span><strong>메인홀 (1,500석)</strong> — 스탠딩 위주의 라이브 공연장. 공연이 있는 날은 현지 음악 씬을 직접 체험할 수 있습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">4</span>
+          <span><strong>7th St Entry (250석)</strong> — 인접한 소규모 공연장. 신진 아티스트와 인디 공연이 자주 열립니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">5</span>
+          <span><strong>기념품 숍</strong> — First Avenue 로고 굿즈와 공연 포스터. Prince 관련 아이템도 판매합니다.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>방문 팁</h2>
+      <div class="tip-box">
+        <div class="tip-box-title">최적 방문 시간</div>
+        <p>외관 사진은 <strong>낮 시간</strong>(자연광에서 별 장식이 선명하게 보임). 야간에는 네온사인과 별이 조화를 이루어 또 다른 분위기를 연출합니다. 공연이 있는 저녁에 방문하면 현지 분위기를 제대로 느낄 수 있습니다.</p>
+      </div>
+      <div class="tip-box">
+        <div class="tip-box-title">사진 촬영 포인트</div>
+        <p><strong>건너편 도로에서 전체 외벽을 담는 구도</strong>가 기본입니다. "First Avenue" 네온사인을 중심에 놓고 좌우 별 장식이 함께 들어오도록 촬영하세요. 야간에는 네온 불빛과 별의 조합이 인상적입니다.</p>
+      </div>
+
+      <h3>실용 정보</h3>
+      <ul>
+        <li>공연 입장 시 <strong>21세 이상 ID 필수</strong> (여권 지참 권장)</li>
+        <li>메인홀은 스탠딩 위주 — 편한 신발 착용</li>
+        <li>인기 공연은 <strong>2~4주 전</strong> 티켓 사전 구매 권장</li>
+        <li>바에서 음료 주문 시 팁 $1~2 관행</li>
+      </ul>
+
+      <h3>한국 여행자 포인트</h3>
+      <ul>
+        <li>Prince의 한국 팬층은 상당히 두텁습니다. 방문 전 <strong>Purple Rain (1984)</strong>을 미리 시청하면 감동이 배가됩니다.</li>
+        <li>외벽 별 장식에서 알고 있는 아티스트 이름을 찾아보는 것 자체가 하나의 게임입니다.</li>
+        <li>공연 일정은 웹사이트에서 확인하되, 단순 외관 방문도 충분히 가치 있습니다.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>주변 맛집</h2>
+      <div class="restaurant-card">
+        <div class="restaurant-name">The Local</div>
+        <div class="restaurant-detail">도보 3분 · 아이리시 펍 · 버거와 맥주 · 저녁 공연 전후 방문 최적</div>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-name">Brit's Pub</div>
+        <div class="restaurant-detail">도보 4분 · 영국풍 펍 · 옥상 잔디 볼링장으로 유명 · 여름 분위기 최고</div>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-name">Hell's Kitchen</div>
+        <div class="restaurant-detail">도보 5분 · 미니애폴리스 명물 브런치 · 독특한 지하 인테리어 · 아침~점심 추천</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

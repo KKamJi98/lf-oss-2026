@@ -1,0 +1,32 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/kkamji98/lf-oss-2026
+  tag: latest
+  pullPolicy: Always
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    external-dns.alpha.kubernetes.io/target: "121.130.214.237"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  host: lf-oss-summit-2026.kkamji.net
+  tls:
+    secretName: lf-oss-summit-2026-tls
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 64Mi
+  requests:
+    cpu: 50m
+    memory: 32Mi

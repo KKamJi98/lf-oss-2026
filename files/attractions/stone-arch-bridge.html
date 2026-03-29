@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stone Arch Bridge — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    /* Additional styles for detail pages */
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin: 20px 0 8px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .info-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+    }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list {
+      list-style: none;
+      padding: 0;
+    }
+    .highlight-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--navy);
+      background: var(--gold);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .tip-box {
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .tip-box.safety {
+      background: rgba(192,82,42,0.08);
+      border-color: rgba(192,82,42,0.4);
+    }
+    .tip-box-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .tip-box.safety .tip-box-title { color: #e87a52; }
+    .restaurant-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+    .restaurant-name {
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .restaurant-detail {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>James J. Hill Stone Arch Bridge</h1>
+    <p class="subtitle">미국 유일 미시시피강 횡단 석조 아치교 — 미니애폴리스 스카이라인 포토스팟 #1</p>
+
+    <div class="info-grid">
+      <span class="info-label">주소</span>
+      <span class="info-value">100 Portland Ave S, Minneapolis, MN 55401</span>
+      <span class="info-label">운영시간</span>
+      <span class="info-value">24시간 개방, 연중무휴</span>
+      <span class="info-label">입장료</span>
+      <span class="info-value">무료</span>
+      <span class="info-label">소요시간</span>
+      <span class="info-value">45분 ~ 1시간 (Mill Ruins Park 연계 시 1.5시간)</span>
+      <span class="info-label">DoubleTree</span>
+      <span class="info-value">도보 25~30분, Uber 8분 ($8~12)</span>
+      <span class="info-label">웹사이트</span>
+      <span class="info-value"><a href="https://www.minneapolisparks.org/parks-destinations/parks-lakes/stone-arch-bridge/" target="_blank" rel="noopener">Minneapolis Parks 공식 페이지</a></span>
+    </div>
+    <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/100+Portland+Ave+S,+Minneapolis,+MN+55401" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+
+    <h2>역사와 배경</h2>
+    <div class="section">
+      <p>Stone Arch Bridge는 1883년 철도왕 <strong>James J. Hill</strong>이 건설한 다리로, 미국에서 유일하게 미시시피강을 가로지르는 석조 아치교입니다. 총 길이 <strong>640m(2,100피트)</strong>에 달하며, 23개의 석회암 아치가 강 위를 우아하게 이어줍니다.</p>
+      <p>원래 Great Northern Railway의 화물 철도교로 사용되었으나, 1978년 철도 운행이 중단된 후 오랜 기간 방치되었습니다. 1994년 대규모 보수 공사를 통해 <strong>보행자 및 자전거 전용 다리</strong>로 재개장했으며, 현재는 미니애폴리스 시민과 방문객 모두가 즐겨 찾는 랜드마크가 되었습니다.</p>
+      <p>National Register of Historic Places(미국 국가 사적지)에 등재되어 있으며, 다리 위에서 바라보는 <strong>Saint Anthony Falls</strong>와 미니애폴리스 다운타운 스카이라인의 조합은 도시 최고의 전망 포인트로 손꼽힙니다.</p>
+    </div>
+
+    <h2>방문 가이드</h2>
+    <div class="section">
+      <h3>최적 방문 시간</h3>
+      <p><strong>일몰 30분 전(5월 기준 약 19:30~20:30)</strong>이 가장 아름다운 빛을 경험할 수 있는 시간대입니다. 황금빛 햇살이 석회암 아치와 강면을 물들이며 다운타운 스카이라인과 어우러지는 장면은 미니애폴리스에서 가장 인상적인 풍경 중 하나입니다.</p>
+      <p>아침 이른 시간(07:00~09:00)도 사람이 적고 동쪽에서 떠오르는 빛이 다리를 정면으로 비추어 촬영하기 좋습니다.</p>
+
+      <h3>DoubleTree에서 이동</h3>
+      <ul>
+        <li>도보: Portland Ave S 방향으로 약 15~20분</li>
+        <li>Lime/Bird 스쿠터: 5~7분 (약 $3~4)</li>
+        <li>Nice Ride 자전거: 다리 남쪽 스테이션 이용 가능</li>
+      </ul>
+
+      <h3>추천 동선</h3>
+      <p>Stone Arch Bridge 남쪽 진입로 시작 → 다리 전체 도보 횡단(약 15분) → 북쪽 Water Power Park 전망대 → 되돌아오며 Saint Anthony Falls 조망 → Mill Ruins Park 연계. 전체 1.5~2시간 소요.</p>
+    </div>
+
+    <h2>하이라이트</h2>
+    <ol class="highlight-list">
+      <li>
+        <span class="highlight-num">1</span>
+        <span><strong>Saint Anthony Falls 전망</strong> — 미시시피강의 유일한 자연 폭포. 다리 중간 지점에서 서쪽을 바라보면 수문과 폭포가 한눈에 들어옵니다. 미니애폴리스 도시 성장의 원동력이 된 역사적 수력 발전 현장입니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">2</span>
+        <span><strong>다운타운 스카이라인 파노라마</strong> — 다리 남쪽 진입로에서 북쪽을 향해 찍으면 23개 석조 아치 너머로 IDS Tower, Foshay Tower 등 미니애폴리스 스카이라인 전체가 담깁니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">3</span>
+        <span><strong>23개 석회암 아치 구조</strong> — 건설 당시 미네소타산 석회암을 일일이 손으로 깎아 쌓은 아치 구조는 140년이 지난 지금도 원형을 유지하고 있습니다. 아치 사이로 내려다보이는 미시시피강의 흐름이 인상적입니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">4</span>
+        <span><strong>Mill Ruins Park 연결</strong> — 다리 남쪽 끝에서 바로 Mill Ruins Park로 이어집니다. 19세기 제분소 석조 유적과 강변 산책로를 함께 둘러볼 수 있습니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">5</span>
+        <span><strong>Water Power Park 전망대</strong> — 다리 북쪽 끝 Nicollet Island 방향에 위치. Saint Anthony Falls를 가장 가까이서 볼 수 있는 전망 포인트입니다.</span>
+      </li>
+    </ol>
+
+    <h2>사진 촬영 팁</h2>
+    <div class="section">
+      <h3>구도 추천</h3>
+      <ul>
+        <li><strong>남쪽 진입로 전경 샷</strong>: 다리 시작점에서 북쪽을 향해 찍으면 아치 + 스카이라인이 한 프레임에 담깁니다. 가장 많이 쓰이는 클래식 구도입니다.</li>
+        <li><strong>난간을 leading line으로</strong>: 다리 난간을 프레임 한쪽에 배치하면 원근감이 살아납니다. 광각 렌즈(24~35mm) 사용 시 효과 극대화.</li>
+        <li><strong>아치 프레이밍</strong>: 다리 아래에서 아치를 프레임으로 삼아 강 상류를 담는 앵글도 독특합니다. Mill Ruins Park 강변에서 접근 가능.</li>
+      </ul>
+      <h3>시간대별 촬영 포인트</h3>
+      <ul>
+        <li><strong>일몰 직전 골든아워</strong>: 서쪽으로 지는 햇빛이 석회암에 황금빛을 입힙니다. 일몰 30분 전부터 30분 후까지가 최적 구간.</li>
+        <li><strong>블루아워(일몰 후 20~30분)</strong>: 하늘이 깊은 파란색으로 변하면서 다운타운 빌딩 조명이 켜지기 시작합니다. 야경 촬영의 황금 시간대.</li>
+        <li><strong>야경 삼각대 필수</strong>: 블루아워 이후 야경 촬영 시 ISO를 낮게 유지하고 삼각대를 사용하면 선명한 빌딩 반영 샷을 얻을 수 있습니다.</li>
+      </ul>
+    </div>
+
+    <h2>주변 맛집/카페</h2>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Owamni by The Sioux Chef</div>
+      <div class="restaurant-detail">도보 5분 | 미국 원주민 식재료 기반 파인다이닝 | James Beard Award 수상 레스토랑 | 예약 필수 | $$$$</div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Aster Cafe</div>
+      <div class="restaurant-detail">도보 3분 | 강변 뷰 테라스 카페 겸 레스토랑 | 브런치·점심 추천 | $$</div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Wilde Cafe &amp; Spirits</div>
+      <div class="restaurant-detail">도보 5분 | 칵테일 바 겸 캐주얼 다이닝 | 저녁 방문 추천 | $$</div>
+    </div>
+
+    <h2>실용 팁</h2>
+    <div class="tip-box safety">
+      <div class="tip-box-title">주의사항</div>
+      <ul>
+        <li>다리 위는 강바람이 강하므로 얇은 재킷 지참을 권장합니다. 특히 저녁 시간대에는 체감 온도가 낮습니다.</li>
+        <li>다리 위에 화장실이 없습니다. 남쪽 Mill Ruins Park 내 공중화장실을 미리 이용하세요.</li>
+        <li>자전거와 보행자가 함께 사용하므로 우측 통행 원칙을 지켜주세요.</li>
+      </ul>
+    </div>
+    <div class="tip-box">
+      <div class="tip-box-title">알아두면 좋은 정보</div>
+      <ul>
+        <li>Nice Ride Minneapolis 자전거 셰어 스테이션이 다리 남쪽에 있어 도심과 연결하기 편리합니다.</li>
+        <li>Mill City Museum(유료)과 연계하면 제분소 역사를 더 깊이 이해할 수 있습니다.</li>
+        <li>Guthrie Theater의 무료 전망대 "Endless Bridge"와 동선 연계 시 Stone Arch Bridge → Mill Ruins → Guthrie 코스로 2~3시간 알차게 채울 수 있습니다.</li>
+      </ul>
+    </div>
+
+    <h2>한국인 여행자 팁</h2>
+    <div class="tip-box">
+      <div class="tip-box-title">한국인 여행자를 위한 안내</div>
+      <ul>
+        <li>다리 내부에는 한국어 안내판이 없습니다. 구글 지도에서 "Stone Arch Bridge Minneapolis"로 검색하면 정확히 남쪽 진입로에 핀이 찍힙니다.</li>
+        <li>인스타그램 해시태그 <strong>#StoneArchBridge</strong> 및 <strong>#MinneapolisSkylne</strong>으로 현지 사진 분위기를 미리 파악하세요.</li>
+        <li><strong>추천 도보 코스</strong>: Stone Arch Bridge → Mill Ruins Park → Guthrie Theater 무료 전망대. 총 2~3시간, 무료로 미니애폴리스 역사지구 핵심을 경험할 수 있습니다.</li>
+        <li>근처 Owamni 레스토랑은 예약 없이 방문 시 2~3시간 대기가 발생할 수 있으므로 방문 전 OpenTable에서 예약을 권장합니다.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

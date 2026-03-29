@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mill City Museum — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--cream); margin: 20px 0 8px; }
+    .info-grid {
+      display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 20px; margin-bottom: 24px;
+    }
+    .info-label { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list { list-style: none; padding: 0; }
+    .highlight-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: flex-start; }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--navy); background: var(--gold); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .tip-box { background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.3); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .tip-box-title { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .restaurant-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+    .restaurant-name { font-weight: 600; color: var(--cream); }
+    .restaurant-detail { font-size: 15px; color: var(--text-muted); }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+    .route-step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .route-step:last-child { border-bottom: none; }
+    .route-arrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>Mill City Museum</h1>
+    <p class="subtitle">세계 최대 제분소 폐허 위에 세운 박물관 — Flour Tower 엘리베이터 쇼, 옥상 전망대. 화~일 운영.</p>
+
+    <div class="section">
+      <div class="info-grid">
+        <span class="info-label">운영 기관</span>
+        <span class="info-value">Minnesota Historical Society</span>
+
+        <span class="info-label">주소</span>
+        <span class="info-value">704 S 2nd St, Minneapolis, MN 55401</span>
+
+        <span class="info-label">운영시간</span>
+        <span class="info-value">화–토 10:00–17:00 / 일 12:00–17:00 / 월 휴관</span>
+
+        <span class="info-label">입장료</span>
+        <span class="info-value">성인 $13 / 시니어 $11 / 어린이 $11. <strong>매월 첫 번째 화요일 무료</strong> (웹 확인).</span>
+
+        <span class="info-label">소요 시간</span>
+        <span class="info-value">1.5–2시간 (Flour Tower 포함)</span>
+
+        <span class="info-label">웹사이트</span>
+        <span class="info-value"><a href="https://www.mnhs.org/millcity" target="_blank" rel="noopener">mnhs.org/millcity</a></span>
+
+        <span class="info-label">DoubleTree</span>
+        <span class="info-value">도보 25분, Uber 8분 ($8~12)</span>
+      </div>
+      <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/704+S+2nd+St,+Minneapolis,+MN+55401" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+    </div>
+
+    <div class="section">
+      <h2>소개</h2>
+      <p>Mill City Museum은 단순한 박물관이 아닙니다. 실제 폐허 위에 지어진 박물관입니다. 1880년대 미네아폴리스는 세계 밀가루 생산의 수도였습니다. 그 중심에 있던 Washburn A Mill은 당시 세계 최대의 제분소였습니다.</p>
+      <p>그러나 1878년 대폭발로 18명이 사망하는 참사가 발생했고, 1991년에는 대화재로 석조 외벽만 남았습니다. 이 폐허 위에 건축가 Thomas Meyer(MSR Design)가 현대 건축을 융합하여 2003년 박물관으로 개관했습니다. 유적과 현대 건축이 공존하는 독특한 구조로 <strong>국제 건축상</strong>을 수상했습니다.</p>
+      <p>밀가루 역사라고 들으면 평범해 보일 수 있지만, 실제로는 매우 극적인 이야기입니다. 폭발, 화재, 산업 흥망, 도시의 탄생 — 이 모든 것이 이 건물 한 곳에 담겨 있습니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>관람 하이라이트</h2>
+      <ul class="highlight-list">
+        <li>
+          <span class="highlight-num">1</span>
+          <span><strong>Flour Tower (필수)</strong> — 8층짜리 엘리베이터를 타며 진행되는 약 20분짜리 멀티미디어 쇼. 제분소의 역사, 폭발 사고, 노동자들의 이야기가 각 층마다 펼쳐집니다. <strong>입장 즉시 시간 배정을 받아야 합니다.</strong> 인원 제한이 있어 인기 시간대는 빨리 마감됩니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">2</span>
+          <span><strong>옥상 전망대</strong> — Stone Arch Bridge와 미시시피강이 한눈에 내려다보입니다. 미네아폴리스에서 손에 꼽히는 사진 포인트 중 하나입니다. 오전에서 이른 오후 사이가 햇빛 각도가 좋습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">3</span>
+          <span><strong>Mill 유적 내부</strong> — 실제 폭발과 화재로 남겨진 석조 외벽 안으로 들어갈 수 있습니다. 현대 유리 건축과 19세기 폐허의 대비가 매우 인상적입니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">4</span>
+          <span><strong>Baking Lab</strong> — 밀가루와 베이킹의 과학을 체험하는 인터랙티브 공간. 어린이 동반 가족에게 특히 인기 있습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">5</span>
+          <span><strong>Water Lab</strong> — 미시시피강의 수력을 이용해 제분소를 가동하던 원리를 시각화한 전시. 강물과 도시 산업화의 관계를 이해하는 데 도움이 됩니다.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>방문 팁</h2>
+
+      <div class="tip-box">
+        <div class="tip-box-title">Flour Tower 예약 우선</div>
+        <p>박물관 도착 즉시 Flour Tower 시간 배정을 먼저 받으세요. 인원 제한이 있어 늦게 도착하면 원하는 시간대에 입장하지 못할 수 있습니다. 입장 전에 웹사이트에서 사전 티켓 구매를 권장합니다.</p>
+      </div>
+
+      <h3>최적 방문 시간</h3>
+      <p>오전 10:00 개장 직후가 가장 좋습니다. 인파가 적고 Flour Tower 시간도 여유 있게 선택할 수 있습니다. 옥상 전망대 사진을 찍을 계획이라면 오전에서 이른 오후 사이 햇빛이 강을 향해 들어오는 시간대를 노리세요.</p>
+
+      <h3>폐소공포증 참고</h3>
+      <p>Flour Tower는 좁은 엘리베이터 내부에서 진행되는 체험입니다. 폐소공포증이 있다면 사전에 고려하세요. 대신 옥상 전망대와 유적 내부만으로도 충분히 가치 있는 방문이 됩니다.</p>
+
+      <h3>무료 입장일</h3>
+      <p>매월 첫 번째 화요일에 무료 입장이 가능합니다. 단, 정책이 변경될 수 있으므로 방문 전 <a href="https://www.mnhs.org/millcity" target="_blank" rel="noopener">공식 웹사이트</a>에서 반드시 확인하세요.</p>
+
+      <h3>추천 동선 (반나절 코스)</h3>
+      <div class="route-step">
+        <span class="route-arrow">01</span>
+        <span><strong>Mill Ruins Park</strong> — 박물관 바로 옆. 강변에 남겨진 실제 제분소 기초 유적을 먼저 둘러봅니다.</span>
+      </div>
+      <div class="route-step">
+        <span class="route-arrow">02</span>
+        <span><strong>Mill City Museum</strong> — Flour Tower 시간 배정 후 전시 관람.</span>
+      </div>
+      <div class="route-step">
+        <span class="route-arrow">03</span>
+        <span><strong>Stone Arch Bridge</strong> — 옥상에서 본 다리를 직접 건너봅니다. 미시시피강 조망과 사진 포인트.</span>
+      </div>
+      <div class="route-step">
+        <span class="route-arrow">04</span>
+        <span><strong>Guthrie Theater</strong> — 브리지 건너편에 위치. 칸틸레버 공중 전망대(무료)에서 강 상류 방향을 조망합니다.</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>주변 식당</h2>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Museum Cafe</div>
+        <div class="restaurant-detail">Mill City Museum 내부. 관람 전후 가볍게 이용하기 좋습니다.</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Sea Change (Guthrie Theater 내)</div>
+        <div class="restaurant-detail">도보 약 3분. Guthrie Theater 1층에 위치한 해산물 레스토랑. 강변 뷰와 함께 점심 식사하기 좋습니다.</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-name">Wilde Cafe</div>
+        <div class="restaurant-detail">도보 약 5분. 강변 근처의 캐주얼 카페. 가볍게 커피나 브런치를 즐기기 적합합니다.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>한국인 여행자를 위한 포인트</h2>
+      <p><strong>Flour Tower는 시각·청각 중심의 멀티미디어 체험이라 언어 장벽이 적습니다.</strong> 영어가 완벽하지 않아도 충분히 즐길 수 있습니다. 폭발 장면, 노동자들의 목소리, 8층을 오르며 달라지는 공간 — 이것만으로도 강한 인상을 남깁니다.</p>
+      <p>한국에도 군산, 인천, 부산 등에 산업 유산을 활용한 박물관들이 있습니다. Mill City Museum은 그런 공간들과 비슷한 감동을 주지만, 규모와 멀티미디어 연출의 완성도는 한 단계 높습니다. '밀가루 역사'라는 소재가 의외로 이렇게까지 극적일 수 있다는 것이 이 박물관의 진짜 매력입니다.</p>
+      <p>옥상 전망대에서 Stone Arch Bridge와 미시시피강을 내려다보는 사진은 미네아폴리스 여행 사진 중 단연 돋보이는 컷이 됩니다. 관람 마지막에 꼭 올라가세요.</p>
+    </div>
+  </div>
+</body>
+</html>

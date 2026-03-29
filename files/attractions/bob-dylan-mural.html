@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bob Dylan Mural — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--cream); margin: 20px 0 8px; }
+    .info-grid {
+      display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 20px; margin-bottom: 24px;
+    }
+    .info-label { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list { list-style: none; padding: 0; }
+    .highlight-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: flex-start; }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--navy); background: var(--gold); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .tip-box { background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.3); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .tip-box-title { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .restaurant-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+    .restaurant-name { font-weight: 600; color: var(--cream); }
+    .restaurant-detail { font-size: 15px; color: var(--text-muted); }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>Bob Dylan Mural</h1>
+    <p class="subtitle">Eduardo Kobra 초대형 컬러 벽화 — 다운타운 인스타 포토스팟</p>
+
+    <div class="section">
+      <div class="info-grid">
+        <span class="info-label">주소</span>
+        <span class="info-value">15 S 5th St, Minneapolis, MN 55402</span>
+        <span class="info-label">운영시간</span>
+        <span class="info-value">24시간 개방 · 무료</span>
+        <span class="info-label">입장료</span>
+        <span class="info-value">무료</span>
+        <span class="info-label">DoubleTree</span>
+        <span class="info-value">도보 8~10분, Uber 5분 ($6~9)</span>
+        <span class="info-label">체류시간</span>
+        <span class="info-value">10~15분 (사진 촬영 포함)</span>
+        <span class="info-label">최적 시간</span>
+        <span class="info-value">오전 10시 ~ 오후 1시 (색감 가장 선명)</span>
+      </div>
+      <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/15+S+5th+St,+Minneapolis,+MN+55402" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+    </div>
+
+    <div class="section">
+      <h2>벽화와 아티스트</h2>
+      <p>이 벽화는 2015년 브라질 출신 스트리트 아티스트 <strong>Eduardo Kobra</strong>가 제작했습니다. 높이 18m(약 60피트)에 달하는 대형 벽화로, Kobra 특유의 <strong>만화경(kaleidoscope) 패턴</strong> — 기하학적 다각형과 강렬한 색 대비 — 이 Bob Dylan의 얼굴 위에 겹쳐 있습니다. 1960년대 젊은 시절의 Dylan 모습을 담은 이 작품은 미니애폴리스 다운타운에서 가장 눈길을 끄는 공공미술 작품 중 하나입니다.</p>
+      <p><strong>Bob Dylan</strong>은 미네소타주 Duluth에서 태어나 자랐습니다. 젊은 시절 미니애폴리스의 Dinkytown 지역에서 포크 음악을 시작했으며, 이후 뉴욕으로 떠나 세계적인 가수이자 시인으로 성장했습니다. 2016년에는 <strong>노벨 문학상</strong>을 수상하며 음악이 문학의 경지에 이를 수 있음을 증명했습니다. 미니애폴리스 시민들은 그를 미네소타가 낳은 가장 위대한 예술가 중 한 명으로 자랑스럽게 여깁니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>주요 볼거리</h2>
+      <ul class="highlight-list">
+        <li>
+          <span class="highlight-num">1</span>
+          <span><strong>벽화 전체 조망</strong> — 5th St 건너편에서 18m 전체 높이를 한 프레임에 담는 구도. 주변 건물과의 스케일 대비가 인상적입니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">2</span>
+          <span><strong>Kobra 기하학적 디테일</strong> — 가까이 다가가면 만화경 패턴의 세밀한 선과 색 구성을 확인할 수 있습니다. 멀리서 보는 얼굴과 가까이서 보는 패턴이 전혀 다른 인상을 줍니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">3</span>
+          <span><strong>Dylan의 1960년대 모습</strong> — 하모니카를 목에 건 젊은 Dylan의 모습이 담겨 있습니다. 그 시절 포크 뮤직 시대의 아이콘적 이미지입니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">4</span>
+          <span><strong>다운타운 거리 분위기</strong> — 벽화 주변으로 미니애폴리스 다운타운의 일상적인 거리 풍경이 펼쳐집니다. 인근 스트리트 아트와 함께 산책하기 좋습니다.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>방문 팁</h2>
+      <div class="tip-box">
+        <div class="tip-box-title">최적 촬영 조건</div>
+        <p><strong>오전 10시~오후 1시</strong>에 햇빛이 벽화 정면으로 들어와 색감이 가장 선명합니다. 비가 온 직후에는 벽면이 약간 촉촉해지면서 색이 더욱 진하게 보이는 효과가 있습니다. 흐린 날에도 색 대비가 강한 이 벽화는 충분히 인상적입니다.</p>
+      </div>
+      <div class="tip-box">
+        <div class="tip-box-title">사진 촬영 포인트</div>
+        <p><strong>5th St 건너편에서 전체를 담는 와이드 구도</strong>가 기본입니다. 세로 구도로 Dylan의 얼굴 절반과 Kobra 패턴을 클로즈업하는 구도도 좋습니다. 인물 사진은 벽화 앞 인도에서 벽화를 배경으로 촬영하면 스케일이 잘 전달됩니다.</p>
+      </div>
+
+      <h3>실용 정보</h3>
+      <ul>
+        <li>차량 통행이 있는 도로변이므로 촬영 시 <strong>차량 주의</strong></li>
+        <li>DoubleTree에서 가장 가까운 명소 — 아침 산책 코스에 포함하기 좋음</li>
+        <li>주변 블록에 다른 스트리트 아트 작품들이 흩어져 있어 미니 아트 투어 가능</li>
+      </ul>
+
+      <h3>한국 여행자 포인트</h3>
+      <ul>
+        <li><strong>"Blowin' in the Wind"</strong>, <strong>"The Times They Are A-Changin'"</strong> 등 Dylan의 대표곡을 미리 들으며 방문하면 감상이 깊어집니다.</li>
+        <li>Eduardo Kobra의 스트리트 아트는 전 세계 여러 도시에 있어, 다른 도시 작품과 비교하는 재미도 있습니다.</li>
+        <li>DoubleTree에서 걸어서 5~7분으로 이 가이드의 어트랙션 중 가장 접근하기 쉽습니다.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>주변 맛집</h2>
+      <div class="restaurant-card">
+        <div class="restaurant-name">Hell's Kitchen</div>
+        <div class="restaurant-detail">도보 3분 · 미니애폴리스 명물 브런치 · 지하 공간의 독특한 인테리어 · 아침~점심 추천</div>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-name">Moose &amp; Sadie's</div>
+        <div class="restaurant-detail">도보 3분 · 캐주얼 카페 · 커피와 샌드위치 · 아침 방문에 적합</div>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-name">The News Room</div>
+        <div class="restaurant-detail">도보 4분 · 아메리칸 다이닝 · 넓은 공간 · 점심 미팅에 좋음</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

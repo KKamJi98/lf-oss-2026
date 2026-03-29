@@ -1,0 +1,6 @@
+apiVersion: v2
+name: lf-oss-2026
+description: LF Open Source Summit 2026 Minneapolis Travel Guidebook
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

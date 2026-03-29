@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minneapolis Sculpture Garden — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    /* Additional styles for detail pages */
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin: 20px 0 8px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .info-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+    }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list {
+      list-style: none;
+      padding: 0;
+    }
+    .highlight-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--navy);
+      background: var(--gold);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .tip-box {
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .tip-box.safety {
+      background: rgba(192,82,42,0.08);
+      border-color: rgba(192,82,42,0.4);
+    }
+    .tip-box-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .tip-box.safety .tip-box-title { color: #e87a52; }
+    .restaurant-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+    .restaurant-name {
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .restaurant-detail {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>Minneapolis Sculpture Garden</h1>
+    <p class="subtitle">미국 최대 도시 야외 조각정원 — Spoonbridge and Cherry 인증샷 성지</p>
+
+    <div class="info-grid">
+      <span class="info-label">주소</span>
+      <span class="info-value">725 Vineland Pl, Minneapolis, MN 55403</span>
+      <span class="info-label">운영시간</span>
+      <span class="info-value">매일 06:00 ~ 자정 (Walker 내부는 별도)</span>
+      <span class="info-label">입장료</span>
+      <span class="info-value">정원 무료 | Walker Art Center 내부 $16 (목요일 무료)</span>
+      <span class="info-label">소요시간</span>
+      <span class="info-value">1시간 ~ 1시간 30분</span>
+      <span class="info-label">DoubleTree</span>
+      <span class="info-value">도보 20~25분, Uber 7분 ($7~11)</span>
+      <span class="info-label">웹사이트</span>
+      <span class="info-value"><a href="https://walkerart.org/garden/" target="_blank" rel="noopener">Walker Art Center 공식 페이지</a></span>
+    </div>
+    <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/725+Vineland+Pl,+Minneapolis,+MN+55403" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+
+    <h2>역사와 배경</h2>
+    <div class="section">
+      <p>Minneapolis Sculpture Garden은 <strong>1988년 개장</strong>한 미국 최대 규모의 도심 야외 조각 공원입니다. Walker Art Center와 인접한 <strong>4.5헥타르(약 11에이커)</strong> 부지에 40점 이상의 조각 작품이 상설 전시되어 있습니다.</p>
+      <p>대표 작품은 Claes Oldenburg와 Coosje van Bruggen이 1988년 제작한 <strong>"Spoonbridge and Cherry"</strong>로, 거대한 티스푼에 체리가 얹혀 있는 초현실적 조각입니다. 길이 15.7m, 높이 9.1m에 달하는 이 작품은 미니애폴리스의 공식적인 아이콘으로 자리 잡았습니다.</p>
+      <p>2017년 대규모 리노베이션을 통해 접근성과 편의시설이 개선되었습니다. Irene Hixon Whitney Bridge(1988, 시인 John Ashbery의 시 인용)가 정원과 Loring Park를 연결합니다.</p>
+    </div>
+
+    <h2>방문 가이드</h2>
+    <div class="section">
+      <h3>최적 방문 시간</h3>
+      <p><strong>오전 9~11시</strong>는 방문객이 적어 조각 작품을 여유롭게 감상하고 인증샷을 찍기 좋습니다. <strong>오후 4~6시</strong>는 서쪽으로 기울어지는 빛이 조각들에 풍부한 그림자를 만들어 사진 결과물이 아름답습니다. 한여름(6~8월) 주말 정오는 가장 붐비는 시간대입니다.</p>
+
+      <h3>DoubleTree에서 이동</h3>
+      <ul>
+        <li>도보: Hennepin Ave 경유, 약 10~12분</li>
+        <li>Lime 스쿠터: 3~5분 (약 $2~3)</li>
+        <li>버스: Metro Transit Route 6 이용</li>
+      </ul>
+
+      <h3>Walker Art Center 연계</h3>
+      <p>정원 관람 후 Walker Art Center 내부 관람을 추천합니다. <strong>매주 목요일 무료 입장</strong>이므로 일정에 맞추면 더욱 경제적입니다. 아시아 현대미술 컬렉션이 상당히 충실하게 구성되어 있습니다.</p>
+    </div>
+
+    <h2>하이라이트</h2>
+    <ol class="highlight-list">
+      <li>
+        <span class="highlight-num">1</span>
+        <span><strong>Spoonbridge and Cherry (Claes Oldenburg, 1988)</strong> — 정원의 상징. 연못 중앙에 설치된 거대한 티스푼과 체리 조각. 분수 기능도 있어 여름에는 체리 꼭지에서 물이 뿜어져 나옵니다. 연못 건너편에서 정면으로 찍는 각도가 가장 웅장합니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">2</span>
+        <span><strong>Hahn/Cock (Katharina Fritsch, 2013)</strong> — 선명한 코발트블루 색상의 거대한 수탉 조각. 높이 4.7m로 정원 입구에서 시선을 사로잡습니다. 유머와 진지함이 공존하는 독일 조각가의 대표작입니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">3</span>
+        <span><strong>Standing Glass Fish (Frank Gehry, 1986)</strong> — Walker Art Center 온실 건물 내부에 설치된 거대한 유리 물고기 조각. 건축가 Gehry의 손에서 탄생한 독특한 작품으로 실내 전시입니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">4</span>
+        <span><strong>LOVE (Robert Indiana, 1966)</strong> — 전 세계적으로 복제된 LOVE 조각의 원조 작가 Robert Indiana 작품. 빨간색 알파벳 조각 앞에서 인증샷을 찍는 것은 방문자들의 필수 코스입니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">5</span>
+        <span><strong>Irene Hixon Whitney Bridge</strong> — 정원과 Loring Park를 연결하는 아치형 보행자 교량. 시인 John Ashbery의 시 구절이 새겨져 있으며, 다리 위에서 바라보는 미니애폴리스 스카이라인도 아름답습니다.</span>
+      </li>
+    </ol>
+
+    <h2>사진 촬영 팁</h2>
+    <div class="section">
+      <h3>Spoonbridge and Cherry 완벽 촬영법</h3>
+      <ul>
+        <li><strong>연못 반대편 구도</strong>: 연못 남쪽 끝에서 북쪽을 바라보면 물 위 반영과 함께 조각 전체가 담깁니다. 가장 많이 활용되는 클래식 구도입니다.</li>
+        <li><strong>오전 골든아워 무인샷</strong>: 오전 7~8시에 방문하면 방문객이 거의 없어 조각만 깔끔하게 담을 수 있습니다.</li>
+        <li><strong>조각 + 스카이라인 와이드샷</strong>: 광각 렌즈로 Spoonbridge 배경에 Walker Art Center 건물과 하늘을 함께 담으면 입체감이 살아납니다.</li>
+      </ul>
+      <h3>기타 촬영 포인트</h3>
+      <ul>
+        <li>Hahn/Cock 조각은 흐린 날에도 코발트블루 색상이 선명하게 나옵니다.</li>
+        <li>Whitney Bridge 위에서 내려다보는 정원 전경도 독특한 앵글을 제공합니다.</li>
+      </ul>
+    </div>
+
+    <h2>주변 맛집/카페</h2>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Esker Grove (Walker Art Center 내)</div>
+      <div class="restaurant-detail">Walker 내부 레스토랑 | 아트 디렉팅된 공간 | 브런치·런치·디너 | $$$$</div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Coup d'Etat</div>
+      <div class="restaurant-detail">도보 5분 | 아시아 퓨전 요리 | 칵테일 바 | $$$</div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Lowry Hill Meats</div>
+      <div class="restaurant-detail">도보 7분 | 로컬 정육점 스타일 샌드위치 | 점심 추천 | $$</div>
+    </div>
+
+    <h2>실용 팁</h2>
+    <div class="tip-box safety">
+      <div class="tip-box-title">주의사항</div>
+      <ul>
+        <li>조각 작품을 만지거나 올라가는 행위는 금지되어 있습니다. 특히 Spoonbridge 연못에 들어가지 않도록 주의하세요.</li>
+        <li>반려동물 동반 시 목줄 착용 필수입니다.</li>
+      </ul>
+    </div>
+    <div class="tip-box">
+      <div class="tip-box-title">알아두면 좋은 정보</div>
+      <ul>
+        <li>정원 내 보행로는 포장이 잘 되어 있어 유모차와 휠체어도 편하게 이용 가능합니다.</li>
+        <li>Walker Art Center 목요일 무료 입장을 활용하면 정원 + 내부 관람을 무료로 즐길 수 있습니다.</li>
+        <li>여름 시즌에는 정원 내 야외 공연과 특별 이벤트가 열립니다. Walker 웹사이트에서 일정 확인 후 방문하면 더욱 풍성한 경험이 가능합니다.</li>
+      </ul>
+    </div>
+
+    <h2>한국인 여행자 팁</h2>
+    <div class="tip-box">
+      <div class="tip-box-title">한국인 여행자를 위한 안내</div>
+      <ul>
+        <li>Walker Art Center 앱(영문)에서 각 조각의 해설을 확인할 수 있습니다.</li>
+        <li><strong>Spoonbridge and Cherry 인증샷</strong>은 미니애폴리스 여행의 필수 코스입니다. 인스타그램 해시태그 <strong>#SpoonbridgeAndCherry</strong>로 사전 구도 연구를 추천합니다.</li>
+        <li>Walker Art Center 내부 아시아 현대미술 컬렉션에는 한국 작가의 작품도 포함되어 있어 관심 있는 분들에게 추천합니다.</li>
+        <li>정원은 24시간 개방이지만, 야간에는 조명이 제한적이므로 일몰 전에 방문하는 것이 좋습니다.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boom Island Park — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--cream); margin: 20px 0 8px; }
+    .info-grid {
+      display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px; padding: 20px; margin-bottom: 24px;
+    }
+    .info-label { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list { list-style: none; padding: 0; }
+    .highlight-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: flex-start; }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--navy); background: var(--gold); width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .tip-box { background: rgba(201,168,76,0.07); border: 1px solid rgba(201,168,76,0.3); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
+    .tip-box-title { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .restaurant-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+    .restaurant-name { font-weight: 600; color: var(--cream); }
+    .restaurant-detail { font-size: 15px; color: var(--text-muted); }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>Boom Island Park</h1>
+    <p class="subtitle">미시시피강변 등대 + 스카이라인 뷰 — 현지인 숨은 일몰 명소</p>
+
+    <div class="section">
+      <div class="info-grid">
+        <span class="info-label">주소</span>
+        <span class="info-value">724 Sibley St NE, Minneapolis, MN 55413</span>
+        <span class="info-label">운영시간</span>
+        <span class="info-value">매일 06:00~자정 · 연중무휴</span>
+        <span class="info-label">입장료</span>
+        <span class="info-value">무료</span>
+        <span class="info-label">웹사이트</span>
+        <span class="info-value"><a href="https://www.minneapolisparks.org/parks-destinations/parks-lakes/boom_island_park/" target="_blank" rel="noopener">minneapolisparks.org</a></span>
+        <span class="info-label">DoubleTree</span>
+        <span class="info-value">도보 비현실적, Uber 10분 ($9~14)</span>
+        <span class="info-label">체류시간</span>
+        <span class="info-value">30분~1시간 (일몰 감상 포함)</span>
+        <span class="info-label">최적 시간</span>
+        <span class="info-value">일몰 20:20~20:40 (여름 기준) — 절대 추천</span>
+      </div>
+      <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/724+Sibley+St+NE,+Minneapolis,+MN+55413" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+    </div>
+
+    <div class="section">
+      <h2>역사와 배경</h2>
+      <p>Boom Island라는 이름은 19세기 미네소타 목재 산업에서 유래했습니다. 당시 이 지역은 미시시피강을 따라 떠내려오는 통나무(log boom)를 모아두던 장소였습니다. 제재소와 목재 야적장이 늘어선 산업 지대였던 이곳은 20세기 들어 환경 정화와 공원 조성 사업을 거쳐 오늘날의 강변 공원으로 탈바꿈했습니다.</p>
+      <p>현재는 미시시피강변을 따라 반도 형태로 뻗은 그린 공간으로, 미니애폴리스 다운타운 스카이라인을 강 너머에서 바라볼 수 있는 몇 안 되는 뷰포인트 중 하나입니다. 관광 안내서보다는 현지인들 사이에서 입소문으로 알려진 <strong>숨은 명소</strong>로, 특히 일몰 시간대에 삼삼오오 모여드는 미니애폴리스 주민들의 모습을 볼 수 있습니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>주요 볼거리</h2>
+      <ul class="highlight-list">
+        <li>
+          <span class="highlight-num">1</span>
+          <span><strong>다운타운 스카이라인 파노라마</strong> — 강 건너편에서 바라보는 미니애폴리스 스카이라인. IDS Center를 비롯한 다운타운 빌딩들이 물에 반사되는 장면이 특히 아름답습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">2</span>
+          <span><strong>소형 등대</strong> — 공원 남서쪽에 위치한 작은 등대. 강과 스카이라인을 배경으로 사진 촬영의 포컬 포인트 역할을 합니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">3</span>
+          <span><strong>강변 산책로</strong> — 미시시피강을 따라 이어지는 산책로. 강물 소리와 함께 여유로운 산책을 즐길 수 있습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">4</span>
+          <span><strong>피크닉</strong> — 잔디 공간이 넓어 돗자리를 펴고 쉬기 좋습니다. 일몰 전 자리를 잡고 여유롭게 시간을 보내는 현지인들이 많습니다.</span>
+        </li>
+        <li>
+          <span class="highlight-num">5</span>
+          <span><strong>Nicollet Island 조망</strong> — 강 건너 Nicollet Island의 빅토리안 양식 건물들과 나무들이 어우러진 풍경을 감상할 수 있습니다.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>방문 팁</h2>
+      <div class="tip-box">
+        <div class="tip-box-title">일몰 방문 — 절대 추천</div>
+        <p>Minneapolis 여름 일몰은 <strong>20:20~20:40</strong>경입니다. 일몰 30분 전에 도착해 자리를 잡으세요. 해가 지평선 아래로 내려가는 골든아워와 이후의 블루아워까지 약 45분간 최고의 빛을 경험할 수 있습니다. 삼각대가 있다면 블루아워 장노출 촬영도 추천합니다.</p>
+      </div>
+      <div class="tip-box">
+        <div class="tip-box-title">사진 촬영 포인트</div>
+        <p>공원 <strong>남서쪽 등대 근처에서 서쪽 방향</strong>으로 카메라를 향하면 등대, 강, 스카이라인이 한 프레임에 담깁니다. 일몰+블루아워 시간대에 와이드 렌즈와 삼각대 조합이 이상적입니다. 스마트폰으로는 야경 모드(Night mode)를 활용하세요.</p>
+      </div>
+
+      <h3>추천 코스</h3>
+      <p><strong>Northeast 브루어리 투어 후 일몰 감상</strong> 코스를 추천합니다. 오후 4~5시에 Dangerous Man Brewing 또는 Indeed Brewing 등 NE 지역 브루어리를 방문한 뒤, 일몰 30분 전에 Boom Island Park로 이동하는 동선이 효율적입니다.</p>
+      <p>또는 Stone Arch Bridge에서 자전거를 빌려 강변 트레일을 따라 10~15분 라이딩 후 도착하는 방법도 있습니다.</p>
+
+      <h3>실용 정보</h3>
+      <ul>
+        <li>여름 저녁 <strong>모기가 많음</strong> — 모기 퇴치제 필수 지참</li>
+        <li>화장실이 있으나 계절에 따라 폐쇄될 수 있음</li>
+        <li>야간에는 조명이 부족하므로 이동 시 주의</li>
+        <li>주차 공간 있음 — 자가용 이용 시 공원 내 무료 주차 가능</li>
+      </ul>
+
+      <h3>한국 여행자 포인트</h3>
+      <ul>
+        <li>관광 안내서에 잘 나오지 않는 곳이라 <strong>"내가 발견한 장소"</strong>의 느낌이 강합니다. 현지인 경험에 가장 가까운 명소입니다.</li>
+        <li>Northeast 브루어리와 결합한 반나절 코스로 구성하면 미니애폴리스 로컬 문화를 제대로 경험할 수 있습니다.</li>
+        <li>Stone Arch Bridge에서 자전거로 이동하면 강변 풍경을 즐기며 이동하는 즐거움이 더해집니다.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>주변 맛집 &amp; 브루어리</h2>
+      <div class="restaurant-card">
+        <div class="restaurant-name">Psycho Suzi's Motor Lounge</div>
+        <div class="restaurant-detail">도보 7분 · 강변 티키바 · 피자와 칵테일 · 야외 테라스에서 강 뷰 · 여름 필수</div>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-name">Dangerous Man Brewing</div>
+        <div class="restaurant-detail">NE 지역 · 소규모 크래프트 브루어리 · 현지 인기 탭룸 · 일몰 전 방문 추천</div>
+      </div>
+      <div class="restaurant-card">
+        <div class="restaurant-name">Indeed Brewing Company</div>
+        <div class="restaurant-detail">NE 지역 · 넓은 탭룸과 푸드 메뉴 · 다양한 IPA와 시즈널 에일 · 그룹 방문에 적합</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

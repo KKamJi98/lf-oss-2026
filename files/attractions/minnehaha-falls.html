@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minnehaha Falls — Minneapolis Guide 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f1b2d;
+      --navy-light: #172437;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f5f0e8;
+      --rust: #c0522a;
+      --sage: #6b8f71;
+      --text-primary: #f5f0e8;
+      --text-muted: #b8c8dc;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      background: var(--navy);
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    /* Additional styles for detail pages */
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin: 20px 0 8px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .info-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+    }
+    .info-value { color: var(--text-muted); }
+    .info-value a { color: var(--gold-light); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .highlight-list {
+      list-style: none;
+      padding: 0;
+    }
+    .highlight-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--navy);
+      background: var(--gold);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .tip-box {
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .tip-box.safety {
+      background: rgba(192,82,42,0.08);
+      border-color: rgba(192,82,42,0.4);
+    }
+    .tip-box-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .tip-box.safety .tip-box-title { color: #e87a52; }
+    .restaurant-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+    .restaurant-name {
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .restaurant-detail {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    p { margin-bottom: 12px; }
+    ul, ol { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    strong { color: var(--cream); }
+    .section { margin-bottom: 36px; }
+    .maps-btn {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--gold);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 6px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .maps-btn:hover { background: rgba(201,168,76,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 가이드북으로 돌아가기</a>
+    <h1>Minnehaha Falls</h1>
+    <p class="subtitle">미니애폴리스 도심 폭포 공원 — 5월 수량 최대, 폭포 뒤 동굴 탐방 가능</p>
+
+    <div class="info-grid">
+      <span class="info-label">주소</span>
+      <span class="info-value">4801 Minnehaha Ave, Minneapolis, MN 55417</span>
+      <span class="info-label">운영시간</span>
+      <span class="info-value">매일 06:00 ~ 자정, 연중무휴</span>
+      <span class="info-label">입장료</span>
+      <span class="info-value">무료</span>
+      <span class="info-label">소요시간</span>
+      <span class="info-value">1시간 ~ 1시간 30분</span>
+      <span class="info-label">DoubleTree</span>
+      <span class="info-value">도보 비현실적, Uber 15분 ($12~18)</span>
+      <span class="info-label">최적 시기</span>
+      <span class="info-value">5월 (봄 눈녹음으로 수량 최대)</span>
+      <span class="info-label">웹사이트</span>
+      <span class="info-value"><a href="https://www.minneapolisparks.org/parks-destinations/parks-lakes/minnehaha-regional-park/" target="_blank" rel="noopener">Minneapolis Parks 공식 페이지</a></span>
+    </div>
+    <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/4801+Minnehaha+Ave,+Minneapolis,+MN+55417" target="_blank" class="maps-btn">📍 Google Maps에서 길찾기</a>
+
+    <h2>역사와 배경</h2>
+    <div class="section">
+      <p>Minnehaha Falls는 Minnehaha Creek이 미시시피강으로 합류하기 직전 형성하는 <strong>높이 16m(53피트)의 폭포</strong>입니다. "Minnehaha"는 Dakota 원주민어로 <strong>"curling water(소용돌이치는 물)"</strong>를 의미합니다.</p>
+      <p>미국 시인 Henry Wadsworth Longfellow가 1855년 발표한 서사시 <strong>"The Song of Hiawatha"</strong>에 이 폭포가 등장하면서 전국적으로 유명해졌습니다. 아이러니하게도 Longfellow는 실제 이 폭포를 한 번도 방문하지 않았고, 당시 유행하던 다게레오타입 사진을 보고 시를 썼다고 전해집니다.</p>
+      <p><strong>1889년 공원으로 조성</strong>되었으며, 폭포 근처에는 Longfellow의 시에 등장하는 "Hiawatha"와 "Minnehaha"의 동상, 그리고 미니애폴리스에서 가장 오래된 건물인 John H. Stevens House가 있습니다.</p>
+    </div>
+
+    <h2>방문 가이드</h2>
+    <div class="section">
+      <h3>최적 방문 시간 및 시기</h3>
+      <p><strong>5월이 최적기</strong>입니다. 겨울철 적설이 녹으면서 Minnehaha Creek의 수량이 1년 중 가장 많아져 폭포의 웅장함이 극대화됩니다. 여름과 가을에는 수량이 다소 줄어들지만 주변 식생이 아름답습니다.</p>
+      <p>하루 중에는 <strong>오전 10시~오후 2시</strong>가 햇빛이 폭포 정면을 비추어 물방울의 빛 산란이 아름답습니다. 오후 늦게는 폭포 주변이 그늘에 들어가 사진이 어두워질 수 있습니다.</p>
+
+      <h3>DoubleTree에서 이동</h3>
+      <ul>
+        <li>Uber/Lyft: 약 15분 ($12~16). 구글 지도에서 "Minnehaha Falls Parking Lot"으로 검색하면 폭포 바로 옆 주차장으로 안내됩니다.</li>
+        <li>Metro Transit Route 23 버스: 약 30분, 가장 경제적인 옵션 ($2.50)</li>
+        <li>자전거: Chain of Lakes Trail 경유 약 25분, 도심에서 경치 좋은 자전거 코스</li>
+      </ul>
+
+      <h3>공원 내 동선</h3>
+      <p>상단 전망대 도착 → 계단 하강 → 폭포 하단 동굴/절벽 탐방 → Creek Trail 따라 강변 산책(약 0.5마일, 편도) → Longfellow 동상 → 출발점 복귀. 총 1~1.5시간 소요.</p>
+    </div>
+
+    <h2>하이라이트</h2>
+    <ol class="highlight-list">
+      <li>
+        <span class="highlight-num">1</span>
+        <span><strong>본 폭포 — 상단 전망대와 하단 뷰포인트</strong> — 16m 높이의 주 폭포. 상단 데크에서 내려다보는 각도와 계단으로 내려가 올려다보는 각도 모두 인상적입니다. 5월 봄 수량이 최대일 때는 물소리가 상당히 웅장합니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">2</span>
+        <span><strong>폭포 뒤 동굴과 절벽</strong> — 폭포 하단으로 내려가면 폭포 뒤로 걸어 들어갈 수 있는 작은 동굴 공간이 있습니다. 수량이 많은 봄철에는 물보라가 상당하므로 방수 재킷이 있으면 좋습니다. 절벽 암석의 질감도 가까이서 관찰할 수 있습니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">3</span>
+        <span><strong>Minnehaha Creek Trail</strong> — 폭포 아래에서 미시시피강 합류 지점까지 이어지는 약 0.5마일(800m) 하천변 산책로입니다. 계절마다 다른 식생과 새들을 관찰할 수 있으며, 5월에는 야생화가 피어납니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">4</span>
+        <span><strong>Hiawatha &amp; Minnehaha 동상</strong> — 폭포 상단 공원 내 Longfellow 서사시의 두 주인공을 묘사한 동상. 1910년에 제작된 역사적 조형물로 사진 배경으로 많이 활용됩니다.</span>
+      </li>
+      <li>
+        <span class="highlight-num">5</span>
+        <span><strong>John H. Stevens House</strong> — 1850년 건설된 미니애폴리스 최초의 주거 건물. 공원 내부에 이전 보존되어 있으며 무료 견학이 가능합니다(여름 시즌 한정).</span>
+      </li>
+    </ol>
+
+    <h2>사진 촬영 팁</h2>
+    <div class="section">
+      <h3>구도 추천</h3>
+      <ul>
+        <li><strong>하단 전망대에서 올려다보기</strong>: 폭포 아래 하단 뷰포인트에서 16m 높이를 올려다보는 앵글이 가장 웅장합니다. 폭포 좌우 절벽을 프레임으로 활용하면 자연스러운 구도가 됩니다.</li>
+        <li><strong>정오 물방울 반짝임</strong>: 오전 10시~오후 1시 사이, 햇빛이 물보라에 직접 닿을 때 미세한 무지개가 생기기도 합니다.</li>
+        <li><strong>장노출 실크 효과</strong>: ND 필터를 사용해 1/4초~1초 장노출로 촬영하면 폭포수가 실크처럼 부드럽게 표현됩니다. 삼각대 필수.</li>
+      </ul>
+      <h3>카메라 관리 주의</h3>
+      <ul>
+        <li>폭포 가까이서 촬영 시 물보라가 렌즈에 닿을 수 있습니다. 마이크로파이버 천을 반드시 지참하세요.</li>
+        <li>스마트폰 촬영 시 폭포 충격 때문에 방수 케이스나 케이스를 단단히 잡는 것을 권장합니다.</li>
+      </ul>
+    </div>
+
+    <h2>주변 맛집/카페</h2>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Sea Salt Eatery</div>
+      <div class="restaurant-detail">공원 내 위치 | 해산물 타코·생선 요리 전문 | 5월 시즌 오픈 | 야외 좌석 | $$ | 주말 대기 있음</div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Minnehaha Falls Cafe</div>
+      <div class="restaurant-detail">공원 근처 | 가벼운 스낵·음료 | 방문 전 운영 여부 확인 권장 | $</div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-name">Sandcastle</div>
+      <div class="restaurant-detail">Bde Maka Ska 호수변 (차량 10분) | 아이스크림·버거 | 여름 시즌 운영 | $$</div>
+    </div>
+
+    <h2>실용 팁</h2>
+    <div class="tip-box safety">
+      <div class="tip-box-title">안전 주의사항</div>
+      <ul>
+        <li>폭포 하단으로 내려가는 계단은 물기가 있을 경우 매우 미끄럽습니다. 미끄럼 방지 밑창 신발을 착용하세요.</li>
+        <li>폭포 뒤 동굴 탐방 시 물보라에 흠뻑 젖을 수 있습니다. 방수 재킷 또는 여벌 상의를 지참하면 좋습니다.</li>
+        <li>5월~9월 방문 시 모기 퇴치제를 사용하는 것을 권장합니다. 하천 근처라 특히 저녁 시간대에 모기가 많습니다.</li>
+      </ul>
+    </div>
+    <div class="tip-box">
+      <div class="tip-box-title">알아두면 좋은 정보</div>
+      <ul>
+        <li>Sea Salt Eatery는 보통 4월 말~5월 초에 시즌 오픈합니다. 방문 전 인스타그램이나 공식 사이트에서 오픈 여부를 확인하세요.</li>
+        <li>주말 점심 시간대는 주차가 혼잡합니다. Uber/Lyft 이용을 권장하며, 구글 지도에 "Minnehaha Falls Parking"으로 검색하면 폭포 옆 주차장으로 안내됩니다.</li>
+        <li>겨울(12~2월)에는 폭포가 얼어붙어 완전히 다른 풍경을 보여줍니다. 미니애폴리스 현지인들이 즐겨 찾는 겨울 명소이기도 합니다.</li>
+      </ul>
+    </div>
+
+    <h2>한국인 여행자 팁</h2>
+    <div class="tip-box">
+      <div class="tip-box-title">한국인 여행자를 위한 안내</div>
+      <ul>
+        <li>규모와 분위기가 <strong>제주 정방폭포</strong>와 유사합니다. 도심에서 가까운 자연 폭포 공원이라는 점도 공통점입니다.</li>
+        <li>구글 지도에서 <strong>"Minnehaha Falls"</strong>로 검색하면 폭포 바로 옆 주차장까지 정확히 안내됩니다. Uber 기사에게도 이 이름으로 말하면 됩니다.</li>
+        <li>Sea Salt Eatery의 피쉬 타코($4~5)는 현지인들에게 인기 있는 메뉴입니다. 줄이 길더라도 주문 후 야외에서 먹는 경험 자체가 좋습니다.</li>
+        <li>인스타그램 해시태그 <strong>#MinnehahaFalls</strong>로 계절별 폭포 모습을 미리 확인해보세요.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
