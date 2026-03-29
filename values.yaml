@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/kkamji98/lf-oss-na-2026
-  tag: "dd6150f"
+  tag: "e1aa426"
   pullPolicy: IfNotPresent
 
 nameOverride: ""
