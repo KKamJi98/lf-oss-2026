@@ -19,9 +19,9 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     external-dns.alpha.kubernetes.io/target: "121.130.214.237"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-  host: lf-oss-summit-2026.kkamji.net
+  host: lf-oss-na-2026.kkamji.net
   tls:
-    secretName: lf-oss-summit-2026-tls
+    secretName: lf-oss-na-2026-tls
 
 resources:
   limits:
