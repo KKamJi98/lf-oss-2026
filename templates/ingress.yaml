@@ -2,9 +2,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "lf-oss-2026.fullname" . }}
+  name: {{ include "lf-oss-na-2026.fullname" . }}
   labels:
-    {{- include "lf-oss-2026.labels" . | nindent 4 }}
+    {{- include "lf-oss-na-2026.labels" . | nindent 4 }}
   annotations:
     {{- toYaml .Values.ingress.annotations | nindent 4 }}
 spec:
@@ -21,7 +21,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "lf-oss-2026.fullname" . }}
+                name: {{ include "lf-oss-na-2026.fullname" . }}
                 port:
                   number: {{ .Values.service.port }}
 {{- end }}

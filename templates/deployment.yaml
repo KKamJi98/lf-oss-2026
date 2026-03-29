@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "lf-oss-2026.fullname" . }}
+  name: {{ include "lf-oss-na-2026.fullname" . }}
   labels:
-    {{- include "lf-oss-2026.labels" . | nindent 4 }}
+    {{- include "lf-oss-na-2026.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "lf-oss-2026.selectorLabels" . | nindent 6 }}
+      {{- include "lf-oss-na-2026.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "lf-oss-2026.selectorLabels" . | nindent 8 }}
+        {{- include "lf-oss-na-2026.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: nginx

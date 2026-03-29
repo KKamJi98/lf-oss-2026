@@ -1,8 +1,8 @@
-{{- define "lf-oss-2026.name" -}}
+{{- define "lf-oss-na-2026.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
-{{- define "lf-oss-2026.fullname" -}}
+{{- define "lf-oss-na-2026.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -15,17 +15,17 @@
 {{- end }}
 {{- end }}
 
-{{- define "lf-oss-2026.chart" -}}
+{{- define "lf-oss-na-2026.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
-{{- define "lf-oss-2026.labels" -}}
-helm.sh/chart: {{ include "lf-oss-2026.chart" . }}
-{{ include "lf-oss-2026.selectorLabels" . }}
+{{- define "lf-oss-na-2026.labels" -}}
+helm.sh/chart: {{ include "lf-oss-na-2026.chart" . }}
+{{ include "lf-oss-na-2026.selectorLabels" . }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
-{{- define "lf-oss-2026.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "lf-oss-2026.name" . }}
+{{- define "lf-oss-na-2026.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "lf-oss-na-2026.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}

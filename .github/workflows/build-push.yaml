@@ -25,7 +25,7 @@ jobs:
 
       - name: Set image name lowercase
         id: repo
-        run: echo "name=$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+        run: echo "name=kkamji98/lf-oss-na-2026" >> $GITHUB_OUTPUT
 
       - name: Get short SHA
         id: sha
