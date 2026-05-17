@@ -452,6 +452,14 @@
     }
     .info-table td:first-child { color: var(--cream); font-weight: 500; min-width: 130px; }
     .info-table tr:last-child td { border-bottom: none; }
+    .table-scroll {
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+    .table-scroll .info-table {
+      min-width: 920px;
+      margin-bottom: 0;
+    }
 
     /* ── Two-Column Layout ── */
     .two-col {
@@ -1241,11 +1249,81 @@
   <section id="tab-food" class="tab-panel">
 
     <div class="highlight-box" style="margin-bottom: 32px;">
-      <div class="highlight-box-title">검증 기준 · 2026-05-16 KST</div>
+      <div class="highlight-box-title">검증 기준 · 2026-05-17 KST</div>
       <p>
-        음식점은 일정 동선에 맞춰 <strong>도보권, North Loop, Northeast, 한식/아시안, 공항/MOA, 심야</strong>로 다시 정렬했습니다.
+        음식점은 일정 동선에 맞춰 <strong>호텔 도보 20~30분권, North Loop, Northeast, 한식/아시안, 공항/MOA, 심야</strong>로 다시 정렬했습니다.
+        정량 점수는 <strong>별점 x 20</strong>으로 100점 환산했고, 리뷰 수가 적거나 source 간 편차가 큰 곳은 보수적으로 해석했습니다.
         이미지가 있는 카드는 official site 또는 안정적인 공식 CDN의 실제 food/interior 사진만 사용했고, 직접 이미지가 애매한 곳은 <strong>사진 보기</strong> 링크로 남겼습니다.
       </p>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">HOTEL WALKABLE SCORECARD — DoubleTree 기준 20~30분 안쪽</div>
+      <div class="highlight-box">
+        <div class="highlight-box-title">상황별 빠른 선택</div>
+        <table class="info-table">
+          <tbody>
+            <tr><td>가장 가까운 고기/칵테일</td><td><strong>The Butcher's Tale</strong> · 도보 4분 · steak, ribs, sausage, craft cocktail · 92점 · 예약 권장</td></tr>
+            <tr><td>아침/브런치 1순위</td><td><strong>Hen House Eatery</strong> · 도보 8분 · chicken &amp; waffles, eggs benedict, cinnamon French toast · 92점 · 오전 일정 전 안전한 선택</td></tr>
+            <tr><td>미니애폴리스 클래식</td><td><strong>Murray's</strong> · 도보 12분 · classic steakhouse · 92점 · Silver Butter Knife Steak, French onion soup</td></tr>
+            <tr><td>특별한 저녁</td><td><strong>Spoon and Stable / Porzana / Kado No Mise</strong> · 도보 24~28분 · 예약 성공 시 우선순위 높음</td></tr>
+            <tr><td>심야 fallback</td><td><strong>The Nicollet Diner / Pizza Luce</strong> · 도보 7~18분 · 점수는 낮아도 영업시간과 접근성이 강점</td></tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-box-title">별점 기반 상세 평가</div>
+        <div class="table-scroll">
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>식당</th>
+                <th>도보</th>
+                <th>무엇을 파는 곳</th>
+                <th>정량 점수</th>
+                <th>대표 메뉴/장점</th>
+                <th>주의점</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>The Butcher's Tale</td><td>4분</td><td>Steakhouse, cocktail bar</td><td>Restaurantji 4.6 / 567 → <strong>92점</strong></td><td>hanger steak, pork ribs, sausage sampler, key lime pie</td><td>$$$$. 가까워서 좋아 보이지만 저녁은 예약 권장. <a href="https://www.restaurantji.com/mn/minneapolis/the-butchers-tale-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/The+Butcher%27s+Tale+1121+Hennepin+Ave+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Hen House Eatery</td><td>8분</td><td>Breakfast, brunch, cafe</td><td>Restaurantji 4.6 / 809 → <strong>92점</strong></td><td>chicken &amp; waffles, eggs benedict, chilaquiles, cinnamon French toast</td><td>주말 아침 대기 가능. 커피보다 식사 중심. <a href="https://www.restaurantji.com/mn/minneapolis/hen-house-eatery-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Hen+House+Eatery+114+S+8th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Murray's</td><td>12분</td><td>Classic steakhouse</td><td>Restaurantji 4.6 / 972 → <strong>92점</strong></td><td>Silver Butter Knife Steak, French onion soup, raspberry pie</td><td>비싸지만 로컬 classic 성격이 강함. <a href="https://www.restaurantji.com/mn/minneapolis/murrays-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Murray%27s+26+S+6th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Zelo</td><td>6분</td><td>Italian, seafood, American</td><td>Restaurantji 4.6 / 683 → <strong>92점</strong></td><td>spicy crab spaghetti, sea bass, mushroom risotto, truffle pizza</td><td>점심보다 happy hour/dinner 중심으로 확인. <a href="https://www.restaurantji.com/mn/minneapolis/zelo-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Zelo+831+Nicollet+Mall+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Spoon and Stable</td><td>27분</td><td>New American, bar</td><td>Restaurantji 4.6 / 520 → <strong>92점</strong></td><td>oysters, dry-aged duck breast, Dorothy's pot roast, black truffle arancini</td><td>North Loop 예약형. 컨퍼런스 후 바로 가려면 시간 여유 필요. <a href="https://www.restaurantji.com/mn/minneapolis/spoon-and-stable-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Spoon+and+Stable+211+N+1st+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Porzana</td><td>27분</td><td>Argentinian steak, empanadas</td><td>Restaurantji 4.6 / 365 → <strong>92점</strong></td><td>empanadas, entrana steak, wagyu flank, Caesar with fried oysters</td><td>활기 있고 시끄러울 수 있음. 예약 우선. <a href="https://www.restaurantji.com/mn/minneapolis/porzana-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Porzana+200+N+1st+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>112 Eatery</td><td>20분</td><td>New American, small plates</td><td>Restaurantji 4.6 / 284 → <strong>92점</strong></td><td>gnocchi, lamb, scallop, late dinner style small plates</td><td>좌석/예약 확인 필요. 혼밥보다는 여유 있는 저녁. <a href="https://www.restaurantji.com/mn/minneapolis/112-eatery-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/112+Eatery+112+N+3rd+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Kado No Mise</td><td>24분</td><td>Japanese sushi, omakase</td><td>Restaurantji 4.6 / 302 → <strong>92점</strong></td><td>sushi, kaiseki, omakase, sake pairing</td><td>예약 난이도 높고 가격대 높음. 성공하면 일식 1순위. <a href="https://www.restaurantji.com/mn/minneapolis/kado-no-mise-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Kado+no+Mise+33+N+1st+Ave+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Wood + Paddle Eatery</td><td>11분</td><td>Minnesota-American, cocktail bar</td><td>Restaurantji 4.5 / 306 → <strong>90점</strong></td><td>walleye, wild rice soup, duck confit stroganoff, cheese curds</td><td>호텔 레스토랑 느낌이 있지만 음식/서비스 평이 안정적. <a href="https://www.restaurantji.com/mn/minneapolis/firelake-grill-house-and-cocktail-bar-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Wood+%2B+Paddle+Eatery+31+S+7th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Manny's Steakhouse</td><td>8분</td><td>Steakhouse, seafood</td><td>Restaurantji 4.5 / 1,118 → <strong>90점</strong></td><td>dry-aged beef, seafood tower, hash browns, huge desserts</td><td>$$$$. 대용량/고가. 혼밥보다는 팀 디너. <a href="https://www.restaurantji.com/mn/minneapolis/mannys-steakhouse-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Manny%27s+Steakhouse+825+Marquette+Ave+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>801 Chophouse</td><td>6분</td><td>Steakhouse, wine bar</td><td>Restaurantji 4.5 / 569 → <strong>90점</strong></td><td>prime rib, king crab, scalloped potatoes, steakhouse desserts</td><td>Polished chain. 로컬성은 Murray's보다 약함. <a href="https://www.restaurantji.com/mn/minneapolis/801-chophouse-minneapolis-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/801+Chophouse+801+Nicollet+Mall+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Bar La Grassa</td><td>28분</td><td>Italian, fresh pasta, wine bar</td><td>OpenTable 4.4 / 1,450 → <strong>88점</strong></td><td>nduja egg raviolo, crab ravioli, gnocchi, shellfish platter</td><td>인기 많고 energetic/noisy. North Loop 끝이라 날씨 나쁘면 Uber. <a href="https://www.opentable.com/r/bar-la-grassa" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Bar+La+Grassa+800+N+Washington+Ave+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>The Oceanaire Seafood Room</td><td>11분</td><td>Seafood, fine dining</td><td>Restaurantji 4.4 / 743 → <strong>88점</strong></td><td>oysters, crab cakes, Chilean sea bass, lobster mac</td><td>$75~100/person급. 해산물 목적이 분명할 때. <a href="https://www.restaurantji.com/mn/minneapolis/the-oceanaire-seafood-room-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/The+Oceanaire+Seafood+Room+50+S+6th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Billy Sushi</td><td>22분</td><td>Sushi bar, Japanese</td><td>Restaurantji 4.4 / 372 → <strong>88점</strong></td><td>bluefin nigiri, sushi boat, crispy rice, creative maki</td><td>시끄럽고 비싼 편. Kado 예약 실패 시 sushi 대안. <a href="https://www.restaurantji.com/mn/minneapolis/billy-sushi-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Billy+Sushi+116+N+1st+Ave+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>The Local Irish Pub</td><td>5분</td><td>Irish pub, American pub food</td><td>Tripexpert aggregate 4.3 / 3,103 → <strong>86점</strong></td><td>fish &amp; chips, shepherd's pie, corned beef poutine, Guinness</td><td>가까운 맥주/저녁용. 음식 destination은 아님. <a href="https://www.tripexpert.com/minneapolis/restaurants/the-local-irish-pub" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/The+Local+Irish+Pub+931+Nicollet+Mall+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Pizza Luce Downtown</td><td>18분</td><td>Pizza, Italian-American</td><td>Tripadvisor 4.3 / 624 → <strong>86점</strong></td><td>pizza, pasta, salad, vegan/gluten-free options</td><td>맛집보다는 late-night/배달 fallback. <a href="https://www.tripadvisor.com/Restaurant_Review-g43323-d444556-Reviews-Pizza_Luce_Downtown-Minneapolis_Minnesota.html" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Pizza+Luce+Downtown+119+N+4th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Mara</td><td>24분</td><td>Mediterranean, hotel fine dining</td><td>Restaurantji 4.2 / 235 → <strong>84점</strong></td><td>prix-fixe dinner, hummus, branzino, shakshuka, bar cocktails</td><td>Four Seasons 가격대. 2026 spring prix-fixe는 $98pp 기준. <a href="https://www.restaurantji.com/mn/minneapolis/mara-restaurant-and-bar-/" target="_blank" class="maps-link">ratings</a> <a href="https://www.mararestaurantandbar.com/food/" target="_blank" class="maps-link">menu</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Mara+Restaurant+and+Bar+245+Hennepin+Ave+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Hell's Kitchen</td><td>8분</td><td>New American, breakfast/brunch</td><td>Restaurantji 4.2 / 1,559 → <strong>84점</strong></td><td>lemon ricotta hotcakes, bison benedict, huevos rancheros, Bloody Mary</td><td>관광객 많고 basement 분위기 호불호. 그래도 아침 접근성 좋음. <a href="https://www.restaurantji.com/mn/minneapolis/hells-kitchen-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Hell%27s+Kitchen+80+S+9th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Brit's Pub</td><td>3분</td><td>British pub, rooftop lawn bowling</td><td>Tripadvisor 4.2 / 1,543 → <strong>84점</strong></td><td>bangers &amp; mash, shepherd's pie, pot pie, fish &amp; chips</td><td>가장 가까운 맥주/펍. 피크타임 혼잡. <a href="https://www.tripadvisor.com/Restaurant_Review-g43323-d481991-Reviews-Brit_s_Pub_Eating_Establishment-Minneapolis_Minnesota.html" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Brit%27s+Pub+1110+Nicollet+Mall+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Gai Noi</td><td>10분</td><td>Laotian, Southeast Asian</td><td>Restaurantji 4.2 / 380 → <strong>84점</strong></td><td>laap, sticky rice, spicy dishes, cocktails</td><td>강한 향신료/매운맛 가능. Loring Park 동선에 좋음. <a href="https://www.restaurantji.com/mn/minneapolis/gai-noi-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Gai+Noi+1610+Harmon+Pl+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Boludo Downtown</td><td>18분</td><td>Argentine pizza, empanadas</td><td>Restaurantji 4.2 / 332 → <strong>84점</strong></td><td>beef/chicken empanadas, Peras pizza, churro donuts</td><td>Fast-casual 성격. 짠맛/서비스 charge 관련 mixed review 확인. <a href="https://www.restaurantji.com/mn/minneapolis/boludo-2/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Boludo+530+S+4th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>The Nicollet Diner</td><td>7분</td><td>24-hour diner, burgers, breakfast</td><td>Restaurantji 4.1 / 718 → <strong>82점</strong></td><td>eggs benedict, Jolly Roger burger, poutine, French toast</td><td>맛 점수보다 24시간 접근성이 핵심. <a href="https://www.restaurantji.com/mn/minneapolis/the-nicollet-diner-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/The+Nicollet+Diner+1333+Nicollet+Mall+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>noa Minneapolis</td><td>10분</td><td>American, cocktail bar</td><td>Restaurantji 4.1 / 187 → <strong>82점</strong></td><td>walleye, salmon, cauliflower, cocktails</td><td>무난한 business lunch/meet-up. 맛집 우선순위는 중간. <a href="https://www.restaurantji.com/mn/minneapolis/noa-minneapolis-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/noa+Minneapolis+77+S+7th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Fhima's Minneapolis</td><td>8분</td><td>French-Mediterranean, Moroccan</td><td>OpenTable recent 3.9 / 289 → <strong>78점</strong></td><td>cocktails, Moroccan/French dinner, historic dining room</td><td>공간은 좋지만 recent rating이 낮아 조건부. <a href="https://www.opentable.com/r/fhimas-minneapolis" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Fhima%27s+Minneapolis+40+S+7th+St+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>The News Room</td><td>4분</td><td>American bar &amp; grill</td><td>Restaurantji 3.8 / 662 → <strong>76점</strong></td><td>short ribs, fried chicken sandwich, fish &amp; chips</td><td>가깝지만 점수 낮음. 비 오는 날 가까운 fallback 정도. <a href="https://www.restaurantji.com/mn/minneapolis/the-news-room-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/The+News+Room+990+Nicollet+Mall+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+              <tr><td>Union Rooftop</td><td>7분</td><td>Rooftop bar &amp; grill</td><td>Restaurantji 3.6 / 772 → <strong>72점</strong></td><td>rooftop drinks, drag brunch, salmon, dumplings</td><td>뷰/이벤트 목적이면 가능. 음식 목적 추천도는 낮음. <a href="https://www.restaurantji.com/mn/minneapolis/union-rooftop-/" target="_blank" class="maps-link">source</a> <a href="https://www.google.com/maps/dir/DoubleTree+Suites+by+Hilton+Minneapolis,+1101+LaSalle+Ave,+Minneapolis,+MN+55403/Union+Rooftop+731+Hennepin+Ave+Minneapolis" target="_blank" class="maps-link">길찾기</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight-box-title">제외/주의 후보</div>
+        <table class="info-table">
+          <tbody>
+            <tr><td>Cafe Lurcat</td><td>2025-09-05 폐업 맥락과 Restaurantji CLOSED 표시 확인. 기존 active 추천에서 제외. <a href="https://www.axios.com/local/twin-cities/2025/07/08/restaurant-roundup-cafe-bar-lurcat-closing-hey-bear-cafe-reopens" target="_blank" class="maps-link">closure note</a> <a href="https://www.restaurantji.com/mn/minneapolis/caf-and-bar-lurcat-/" target="_blank" class="maps-link">closed listing</a></td></tr>
+            <tr><td>Kieran's Irish Pub</td><td>도보권이지만 Restaurantji 3.9 / 432로 The Local/Brit's보다 우선순위 낮음. Target Center 쪽 일정이면 후보. <a href="https://www.restaurantji.com/mn/minneapolis/kierans-irish-pub-/" target="_blank" class="maps-link">source</a></td></tr>
+            <tr><td>CRAVE / generic hotel dining</td><td>대규모 그룹/메뉴 다양성 목적이면 가능하지만, 이번 리스트에서는 local food 경험 우선으로 기본 추천에서 제외.</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div class="section-block">
